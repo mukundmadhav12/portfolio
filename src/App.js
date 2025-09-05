@@ -102,7 +102,8 @@ function App() {
         >
           <h2 className="section-title">💼 Experience</h2>
           <h5>Software Developer | Unikaihatsu Software Pvt Ltd</h5>
-          <p className="text-muted">June 2022 – Present</p>
+          <p className="experience-date">June 2022 – Present</p>
+
           <ul>
             <li>Mentored junior developers and conducted code reviews.</li>
             <li>Integrated APIs reducing system errors by 30%.</li>

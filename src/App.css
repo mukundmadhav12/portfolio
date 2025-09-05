@@ -108,3 +108,13 @@ footer p {
   font-size: 14px;
   opacity: 0.8;
 }
+/* ✅ Highlighted Experience Dates */
+.experience-date {
+  color: #f8d210;
+text-shadow: 0 0 6px rgba(248, 210, 16, 0.8);
+              /* Cyan neon shade */
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
