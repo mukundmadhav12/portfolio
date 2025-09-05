@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 function App() {
+  // ✅ Clean query params (utm_source etc.) from URL
+  useEffect(() => {
+    if (window.location.search) {
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
+  }, []);
+
   return (
     <div className="app-container">
       {/* Hero Section */}
@@ -19,7 +26,10 @@ function App() {
           Frontend Developer | React | JavaScript | PHP
         </p>
         <div>
-          <a href="mailto:mukund1252001@gmail.com" className="btn btn-light btn-lg shadow-sm">
+          <a
+            href="mailto:mukund1252001@gmail.com"
+            className="btn btn-light btn-lg shadow-sm"
+          >
             <FaEnvelope className="me-2" /> Contact Me
           </a>
         </div>
@@ -50,9 +60,15 @@ function App() {
         >
           <h2 className="section-title">💡 Skills & Expertise</h2>
           <div className="row">
-            <div className="col-md-4"><li>JavaScript, ReactJS, Redux</li></div>
-            <div className="col-md-4"><li>NextJS, React Native</li></div>
-            <div className="col-md-4"><li>PHP, MySQL, CakePHP</li></div>
+            <div className="col-md-4">
+              <li>JavaScript, ReactJS, Redux</li>
+            </div>
+            <div className="col-md-4">
+              <li>NextJS, React Native</li>
+            </div>
+            <div className="col-md-4">
+              <li>PHP, MySQL, CakePHP</li>
+            </div>
           </div>
         </motion.section>
 
