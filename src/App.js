@@ -1,18 +1,18 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaWhatsapp } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 function App() {
-  // ✅ Clean query params (utm_source etc.) from URL
+  // ✅ Clean query params
   useEffect(() => {
     if (window.location.search) {
       window.history.replaceState({}, document.title, window.location.pathname);
     }
   }, []);
 
-  // ✅ Smooth scroll to summary section
+  // ✅ Smooth scroll
   const scrollToSummary = () => {
     const section = document.getElementById("summary");
     if (section) {
@@ -33,16 +33,37 @@ function App() {
         <p className="lead mb-3">
           Frontend Developer | React | JavaScript | PHP
         </p>
-        <div>
+
+        {/* ✅ Contact Buttons */}
+        <div className="d-flex flex-wrap justify-content-center gap-3 mt-3">
+          {/* Email */}
           <a
             href="mailto:mukund1252001@gmail.com"
             className="btn btn-light btn-lg shadow-sm"
           >
-            <FaEnvelope className="me-2" /> Contact Me
+            <FaEnvelope className="me-2" /> Email
+          </a>
+
+          {/* Call */}
+          <a
+            href="tel:+916205680645"  
+            className="btn btn-primary btn-lg shadow-sm"
+          >
+            <FaPhone className="me-2" /> Call
+          </a>
+
+          {/* WhatsApp */}
+          <a
+            href="https://wa.me/917091059028?text=Hi%20Mukund%2C%20I%20saw%20your%20portfolio!" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-success btn-lg shadow-sm whatsapp-btn"
+          >
+            <FaWhatsapp className="me-2" /> WhatsApp
           </a>
         </div>
 
-        {/* ✅ Scroll Down Hand Gesture */}
+        {/* ✅ Hand Gesture Scroll Indicator */}
         <motion.div
           className="scroll-indicator"
           initial={{ opacity: 0, y: -10 }}
@@ -81,13 +102,13 @@ function App() {
         >
           <h2 className="section-title">💡 Skills & Expertise</h2>
           <div className="row">
-            <div className="col-md-4">
+            <div className="col-md-4 col-sm-6 col-12">
               <li>JavaScript, ReactJS, Redux</li>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-4 col-sm-6 col-12">
               <li>NextJS, React Native</li>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-4 col-sm-6 col-12">
               <li>PHP, MySQL, CakePHP</li>
             </div>
           </div>
@@ -103,7 +124,6 @@ function App() {
           <h2 className="section-title">💼 Experience</h2>
           <h5>Software Developer | Unikaihatsu Software Pvt Ltd</h5>
           <p className="experience-date">June 2022 – Present</p>
-
           <ul>
             <li>Mentored junior developers and conducted code reviews.</li>
             <li>Integrated APIs reducing system errors by 30%.</li>
@@ -120,19 +140,19 @@ function App() {
         >
           <h2 className="section-title">🛠️ Projects</h2>
           <div className="row">
-            <div className="col-md-4">
+            <div className="col-md-4 col-sm-6 col-12">
               <div className="project-card p-3">
                 <h5>Product Distribution System</h5>
                 <p>React JS, Redux, Redux-Saga</p>
               </div>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-4 col-sm-6 col-12">
               <div className="project-card p-3">
                 <h5>Shop-Mall</h5>
                 <p>NextJS, Redux, Redux-Saga</p>
               </div>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-4 col-sm-6 col-12">
               <div className="project-card p-3">
                 <h5>EMSGO</h5>
                 <p>React Native, Redux, Socket.IO</p>
@@ -153,6 +173,17 @@ function App() {
           className="text-white mx-2"
         >
           <FaLinkedin size={24} />
+        </a>
+        <a href="tel:+916205680645" className="text-white mx-2">
+          <FaPhone size={24} />
+        </a>
+        <a
+          href="https://wa.me/917091059028?text=Hi%20Mukund%2C%20I%20saw%20your%20portfolio!"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white mx-2"
+        >
+          <FaWhatsapp size={24} />
         </a>
       </footer>
     </div>
