@@ -42,7 +42,7 @@ function App() {
           </a>
         </div>
 
-        {/* ✅ Scroll Down Indicator */}
+        {/* ✅ Scroll Down Hand Gesture */}
         <motion.div
           className="scroll-indicator"
           initial={{ opacity: 0, y: -10 }}
@@ -51,7 +51,7 @@ function App() {
           onClick={scrollToSummary}
         >
           <span className="scroll-text">Scroll Down</span>
-          <div className="arrow"></div>
+          <div className="hand-gesture">👇</div>
         </motion.div>
       </motion.header>
 

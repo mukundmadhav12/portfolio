@@ -2,7 +2,7 @@
 .app-container {
   background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
   min-height: 100vh;
-  scroll-behavior: smooth; /* ✅ smooth scroll */
+  scroll-behavior: smooth;
 }
 
 /* Hero Section */
@@ -16,7 +16,6 @@
   overflow: hidden;
 }
 
-/* Hero Text Enhancements */
 .hero-section h1 {
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
@@ -76,29 +75,25 @@
 
 .scroll-text {
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
   font-weight: 500;
   letter-spacing: 1px;
   font-size: 14px;
   opacity: 0.8;
 }
 
-.scroll-indicator .arrow {
-  width: 18px;
-  height: 18px;
-  border-left: 2px solid #fff;
-  border-bottom: 2px solid #fff;
-  transform: rotate(-45deg);
-  margin: 0 auto;
-  animation: bounce 1.5s infinite;
+/* Hand Gesture Animation */
+.hand-gesture {
+  font-size: 28px;
+  animation: bounce-hand 1.5s infinite;
 }
 
-@keyframes bounce {
+@keyframes bounce-hand {
   0%, 100% {
-    transform: rotate(-45deg) translateY(0);
+    transform: translateY(0);
   }
   50% {
-    transform: rotate(-45deg) translateY(10px);
+    transform: translateY(10px);
   }
 }
 
