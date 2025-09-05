@@ -21,7 +21,7 @@ function App() {
         animate={{ opacity: 1 }}
         transition={{ duration: 1.2 }}
       >
-        <h1 className="fw-bold display-3">Mukund Madhav</h1>
+        <h1 className="fw-bold display-3">Mukund Madha</h1>
         <p className="lead mb-3">
           Frontend Developer | React | JavaScript | PHP
         </p>
