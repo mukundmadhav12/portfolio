@@ -2,6 +2,7 @@
 .app-container {
   background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
   min-height: 100vh;
+  scroll-behavior: smooth; /* ✅ smooth scroll */
 }
 
 /* Hero Section */
@@ -11,13 +12,25 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hero Text Enhancements */
+.hero-section h1 {
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section p {
+  font-size: 1.3rem;
+  color: #f5f5f5;
 }
 
 /* Glass Effect Cards */
 .glass-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
   border-radius: 15px;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
   color: white;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -25,26 +38,78 @@
 
 .glass-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45);
 }
 
 /* Section Titles */
 .section-title {
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   color: #f8d210;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 /* Project Cards */
 .project-card {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.12);
   border-radius: 12px;
   text-align: center;
   color: #fff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
 }
 
 .project-card:hover {
   transform: translateY(-8px) scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.55);
+}
+
+/* ✅ Scroll Indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 25px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+.scroll-text {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.scroll-indicator .arrow {
+  width: 18px;
+  height: 18px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(-45deg);
+  margin: 0 auto;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: rotate(-45deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-45deg) translateY(10px);
+  }
+}
+
+/* Footer */
+footer {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.8;
 }

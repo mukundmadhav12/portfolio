@@ -12,11 +12,19 @@ function App() {
     }
   }, []);
 
+  // ✅ Smooth scroll to summary section
+  const scrollToSummary = () => {
+    const section = document.getElementById("summary");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="app-container">
       {/* Hero Section */}
       <motion.header
-        className="hero-section text-center text-white d-flex flex-column justify-content-center align-items-center"
+        className="hero-section text-center text-white d-flex flex-column justify-content-center align-items-center position-relative"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.2 }}
@@ -33,11 +41,24 @@ function App() {
             <FaEnvelope className="me-2" /> Contact Me
           </a>
         </div>
+
+        {/* ✅ Scroll Down Indicator */}
+        <motion.div
+          className="scroll-indicator"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 10 }}
+          transition={{ duration: 1, repeat: Infinity, repeatType: "reverse" }}
+          onClick={scrollToSummary}
+        >
+          <span className="scroll-text">Scroll Down</span>
+          <div className="arrow"></div>
+        </motion.div>
       </motion.header>
 
       <div className="container py-5">
         {/* Summary */}
         <motion.section
+          id="summary"
           className="glass-card p-4 mb-5"
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
