@@ -1,8 +1,17 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaWhatsapp } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+  FaPhone,
+  FaWhatsapp,
+} from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+
+// ✅ Import photo
+import MukundPhoto from "./images/mukund.jpeg";
 
 function App() {
   // ✅ Clean query params
@@ -29,9 +38,18 @@ function App() {
         animate={{ opacity: 1 }}
         transition={{ duration: 1.2 }}
       >
-        <h1 className="fw-bold display-3">Mukund Madhav</h1>
+        {/* ✅ Profile Photo */}
+        <img
+          src={MukundPhoto}
+          alt="Mukund Madhav"
+          className="profile-img mb-3"
+        />
+
+        <h1 className="fw-bold display-3">Mukund Madhav (ムクンド・マダブ)</h1>
         <p className="lead mb-3">
-          Frontend Developer | React | JavaScript | PHP
+          Bilingual Fullstack Developer | PHP | MYSQL | SQL | Cake PHP | Laravel
+          | HTML | CSS | Javascript | Bootstrap | React.JS | Redux | Next.js |
+          React Native | Joomla
         </p>
 
         {/* ✅ Contact Buttons */}
@@ -45,16 +63,13 @@ function App() {
           </a>
 
           {/* Call */}
-          <a
-            href="tel:+916205680645"  
-            className="btn btn-primary btn-lg shadow-sm"
-          >
+          <a href="tel:+916205680645" className="btn btn-primary btn-lg shadow-sm">
             <FaPhone className="me-2" /> Call
           </a>
 
           {/* WhatsApp */}
           <a
-            href="https://wa.me/917091059028?text=Hi%20Mukund%2C%20I%20saw%20your%20portfolio!" 
+            href="https://wa.me/917091059028?text=Hi%20Mukund%2C%20I%20saw%20your%20portfolio!"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-success btn-lg shadow-sm whatsapp-btn"
@@ -87,9 +102,14 @@ function App() {
         >
           <h2 className="section-title">🚀 Professional Summary</h2>
           <p>
-            A passionate frontend developer specializing in JavaScript
-            technologies. Ever eager to learn new things and work outside of my
-            comfort zone.
+            Throughout my career, I have demonstrated strong problem-solving
+            skills, a commitment to clean and maintainable code, and the ability
+            to work effectively in collaborative environments. I am passionate
+            about leveraging my full-stack expertise to bridge the gap between
+            business requirements and technical solutions, ensuring projects are
+            delivered on time with the highest quality. My focus is always on
+            innovation, efficiency, and creating digital solutions that add
+            value and drive growth.
           </p>
         </motion.section>
 
@@ -106,10 +126,10 @@ function App() {
               <li>JavaScript, ReactJS, Redux</li>
             </div>
             <div className="col-md-4 col-sm-6 col-12">
-              <li>NextJS, React Native</li>
+              <li>NextJS, React Native, HTML, CSS, Bootstrap</li>
             </div>
             <div className="col-md-4 col-sm-6 col-12">
-              <li>PHP, MySQL, CakePHP</li>
+              <li>PHP, MySQL, CakePHP, Laravel, Joomla</li>
             </div>
           </div>
         </motion.section>
@@ -128,6 +148,22 @@ function App() {
             <li>Mentored junior developers and conducted code reviews.</li>
             <li>Integrated APIs reducing system errors by 30%.</li>
             <li>Optimized React performance (30% faster load).</li>
+            <li>
+              Developed and deployed scalable web applications using PHP,
+              Laravel, and MySQL, improving efficiency and reliability.
+            </li>
+            <li>
+              Implemented responsive UI designs with React.js, Next.js, and
+              Bootstrap, enhancing user experience across devices.
+            </li>
+            <li>
+              Automated database queries and optimized SQL performance, reducing
+              load time and improving application speed.
+            </li>
+            <li>
+              Collaborated with cross-functional teams to deliver end-to-end
+              solutions, ensuring alignment with business requirements.
+            </li>
           </ul>
         </motion.section>
 
@@ -149,13 +185,13 @@ function App() {
             <div className="col-md-4 col-sm-6 col-12">
               <div className="project-card p-3">
                 <h5>Shop-Mall</h5>
-                <p>NextJS, Redux, Redux-Saga</p>
+                <p>NextJS, Redux, Redux-Saga, PHP, MySQL, Laravel</p>
               </div>
             </div>
             <div className="col-md-4 col-sm-6 col-12">
               <div className="project-card p-3">
                 <h5>EMSGO</h5>
-                <p>React Native, Redux, Socket.IO</p>
+                <p>PHP, MySQL, CakePHP</p>
               </div>
             </div>
           </div>
